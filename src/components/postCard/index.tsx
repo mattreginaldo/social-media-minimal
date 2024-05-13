@@ -6,9 +6,9 @@ import queryKeys from '@/react-query';
 import { getUser } from '@/services/user';
 import { Profile } from '@/@types/profile';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import { deletePost } from '@/services/posts';
 
 import * as S from './styles';
-import { deletePost } from '@/services/posts';
 
 const PostCard = ({ id: postId, author, publishedAt, body }: Post) => {
   const queryClient = useQueryClient();
