@@ -16,6 +16,7 @@ ${({ theme }) => css`
 
     * {
         box-sizing: border-box;
+        line-height: 1;
     }
 `}
 `;

@@ -7,6 +7,9 @@ const darkTheme: Theme = createTheme({
       default: '#121214',
       paper: '#121214',
     },
+    primary: {
+      main: '#00875F',
+    },
   },
 });
 
