@@ -73,6 +73,6 @@ Você vai perceber que depois de um determinado tempo os dados são resetados na
 <div align="center">
     <img width="75px" src="https://scontent.cdninstagram.com/v/t39.30808-6/410252134_18391801138066325_1508734687614870344_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE0NDAuc2RyLmYzMDgwOCJ9&_nc_ht=scontent.cdninstagram.com&_nc_cat=105&_nc_ohc=lRiQjY5Fw8YQ7kNvgEau2Cs&edm=APs17CUAAAAA&ccb=7-5&ig_cache_key=MzI1OTk2NTgxODY0NDUwNjc4Mw%3D%3D.2-ccb7-5&oh=00_AYBQs0a7pdtY637dcL0rhSmQAwQC4YCvGLAlRqHIw_Ug3A&oe=6645F5B3&_nc_sid=10d13b">
   <p align="center">
-    Built and maintained by <a href="https://www.linkedin.com/company/usabit/mycompany/">Mateus Reginaldo</a>.
+    Built and maintained by <a href="https://www.linkedin.com/in/mateusreginaldo/">Mateus Reginaldo</a>.
   </p>
 </div>
