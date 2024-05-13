@@ -10,7 +10,7 @@ const limit = 300;
 const extensions = [
   StarterKit,
   Placeholder.configure({
-    placeholder: 'Write something …',
+    placeholder: 'Escreva alguma coisa …',
   }),
   CharacterCount.configure({
     limit,
