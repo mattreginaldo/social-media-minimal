@@ -9,6 +9,7 @@ import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined
 import { deletePost } from '@/services/posts';
 
 import * as S from './styles';
+import { CircularProgress } from '@mui/material';
 
 const PostCard = ({ id: postId, author, publishedAt, body }: Post) => {
   const queryClient = useQueryClient();
@@ -20,7 +21,7 @@ const PostCard = ({ id: postId, author, publishedAt, body }: Post) => {
 
   const profile = queryUser as { data: Profile };
 
-  const { mutate } = useMutation({
+  const { isPending: loadingDeletePost, mutate } = useMutation({
     mutationFn: deletePost,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: [queryKeys.posts] });
@@ -66,7 +67,11 @@ const PostCard = ({ id: postId, author, publishedAt, body }: Post) => {
 
       {getAuthor().permissionToDelete && (
         <S.CardFooter>
-          <DeleteOutlineOutlinedIcon onClick={removePost} />
+          {loadingDeletePost ? (
+            <CircularProgress size={24} color="inherit" />
+          ) : (
+            <DeleteOutlineOutlinedIcon onClick={removePost} />
+          )}
         </S.CardFooter>
       )}
     </S.CardStyled>

@@ -20,6 +20,16 @@ interface Props {
 
 const EditProfileModal = ({ open, onClose }: Props) => {
   const [previewImage, setPreviewImage] = useState<string>('');
+  const {
+    control,
+    handleSubmit,
+    setValue,
+    reset,
+    formState: { isDirty, errors },
+  } = useForm<Profile>({
+    resolver: zodResolver(editProfileSchema),
+    mode: 'onChange',
+  });
 
   const queryClient = useQueryClient();
 
@@ -43,24 +53,6 @@ const EditProfileModal = ({ open, onClose }: Props) => {
 
   const roles = (queryRoles?.data as Roles) || [];
 
-  const {
-    control,
-    handleSubmit,
-    setValue,
-    reset,
-    formState: { isDirty, errors },
-  } = useForm<Profile>({
-    resolver: zodResolver(editProfileSchema),
-    mode: 'onChange',
-  });
-
-  const onSubmit = (data: Profile) => {
-    mutate({
-      ...profile,
-      ...data,
-    });
-  };
-
   const handleImageChange: ChangeEventHandler<HTMLInputElement> = e => {
     const file = e.target.files?.[0];
 
@@ -81,6 +73,13 @@ const EditProfileModal = ({ open, onClose }: Props) => {
       };
       reader.readAsDataURL(file);
     }
+  };
+
+  const onSubmit = (data: Profile) => {
+    mutate({
+      ...profile,
+      ...data,
+    });
   };
 
   return (
