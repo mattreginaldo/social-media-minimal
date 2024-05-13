@@ -66,7 +66,7 @@ E a API fake aqui:
 
 ## Consideranções sobre a API Fake
 
-Você vai perceber que em um determinado tempo os dados são resetados na API e que ela volta ao estado inicial.
+Você vai perceber que depois de um determinado tempo os dados são resetados na API e que ela volta ao estado inicial.
 
 <p align="center"><img  src="https://user-images.githubusercontent.com/51330232/197884349-fec3877b-df77-4467-bd89-7d39a435530a.png"/></p>
 
