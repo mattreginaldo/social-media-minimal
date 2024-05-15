@@ -21,7 +21,6 @@ Para executar o projeto, basta ter o NodeJS e o seu gerenciador de pacotes insta
 ## Rodando projeto
 
 Rodar este projeto é simples:
-s
 
 ```sh
 pnpm install ou pnpm i
